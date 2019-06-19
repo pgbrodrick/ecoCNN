@@ -87,7 +87,7 @@ def apply_semantic_segmentation(input_file_list,\
       if (global_scale_flag != 'none'):
        for n in range(0,feature.shape[2]):
         gd = feature[:,:,n] != nodata_value
-        feature_scaling = global_scale(feature[:,:,n],global_scale_flag,nd=nodata_value)
+        feature_scaling = scale_image(feature[:,:,n],global_scale_flag,nd=nodata_value)
         feature[gd,n] = feature[gd,n] - feature_scaling[0]
         feature[gd,n] = feature[gd,n] / feature_scaling[1]
   

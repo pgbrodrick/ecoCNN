@@ -261,7 +261,7 @@ def build_semantic_segmentation_training_data(window_radius, samples_per_respons
   check_data_matches(feature_file_list,response_file_list,response_vector_flag,boundary_file_list,boundary_file_vector_flag,ignore_projections)
 
   if (isinstance(samples_per_response_per_site,list)):
-    if (len(samples_per_response_site) != len(feature_file_list)):
+    if (len(samples_per_response_per_site) != len(feature_file_list)):
       raise Exception('samples_per_response_per_site must equal feature_file_list length, or be an integer.')
 
   if internal_window_radius is None:
