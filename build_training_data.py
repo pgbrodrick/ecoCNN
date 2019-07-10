@@ -1,4 +1,4 @@
-import gdal,ogr
+from osgeo import gdal, ogr
 import numpy as np
 import sys,os
 import fiona
