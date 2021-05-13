@@ -295,7 +295,7 @@ def build_semantic_segmentation_training_data(window_radius, samples_per_respons
       response = gdal.Open(response_file_list[_i]).ReadAsArray().astype(float)
 
     if (len(boundary_file_list) > 0):
-      if (boundary_file_list[n] is not None):
+      if (boundary_file_list[_i] is not None):
         if (response_vector_flag):
           mask = rasterize_vector(boundary_file_list[_i],dataset.GetGeoTransform(),[feature.shape[0],feature.shape[1]])
         else:
